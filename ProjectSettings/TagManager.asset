@@ -15,8 +15,8 @@ TagManager:
   - 
   - Background
   - Character
-  - 
-  - 
+  - Skill
+  - Player
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 3591075145
+    locked: 0
+  - name: FX
+    uniqueID: 496801923
     locked: 0

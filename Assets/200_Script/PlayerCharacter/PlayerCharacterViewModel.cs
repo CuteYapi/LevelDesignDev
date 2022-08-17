@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCharacterViewModel : MonoBehaviour
 {
-    public PlayerCharacterViewModel I { get; private set; }
+    public static PlayerCharacterViewModel I { get; private set; }
 
     private float playerCharacterMoveSpeed;
 
@@ -19,7 +19,7 @@ public class PlayerCharacterViewModel : MonoBehaviour
         I = this;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         PlayerCharacterControl();
     }
@@ -31,41 +31,36 @@ public class PlayerCharacterViewModel : MonoBehaviour
         #region Character Move
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += playerCharacterMoveSpeed * Vector3.up;
+            transform.localPosition += playerCharacterMoveSpeed * Vector3.up;
             playerCharacterAnimator.SetBool("isRun", true);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += playerCharacterMoveSpeed * Vector3.down;
+            transform.localPosition += playerCharacterMoveSpeed * Vector3.down;
             playerCharacterAnimator.SetBool("isRun", true);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += playerCharacterMoveSpeed * Vector3.left;
+            transform.localPosition += playerCharacterMoveSpeed * Vector3.left;
             playerCharacterAnimator.SetBool("isRun", true);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += playerCharacterMoveSpeed * Vector3.right;
+            transform.localPosition += playerCharacterMoveSpeed * Vector3.right;
             playerCharacterAnimator.SetBool("isRun", true);
         }
 
         if (!(Input.GetKey(KeyCode.W)
             || Input.GetKey(KeyCode.A)
             || Input.GetKey(KeyCode.D)
-            || Input.GetKey(KeyCode.W))
-            )
+            || Input.GetKey(KeyCode.W)
+            ))
         {
             playerCharacterAnimator.SetBool("isRun", false);
         }
         #endregion
-
-        if (Input.GetMouseButton(0))
-        {
-            playerCharacterAnimator.Play("MayanTribeKnight_Attack");
-        }
     }
 }

@@ -15,7 +15,7 @@ public class StageModel : MonoBehaviour
 
     private void Awake()
     {
-        if(I != null && I != this)
+        if (I != null && I != this)
         {
             Destroy(I.gameObject);
         }
@@ -24,8 +24,8 @@ public class StageModel : MonoBehaviour
 
     private void Start()
     {
-        TimeTrigger = Stage01.dataArray.Where(x => x.Trigger == "Time").ToList();
-        ScoreTrigger = Stage01.dataArray.Where(x => x.Trigger == "Score").ToList();
-        KillCountTrigger = Stage01.dataArray.Where(x => x.Trigger == "KillCount").ToList();
+        TimeTrigger = Stage01.dataArray.Where(x => x.Trigger == "Time").OrderBy(x => x.Condition).ToList();
+        ScoreTrigger = Stage01.dataArray.Where(x => x.Trigger == "Score").OrderBy(x => x.Condition).ToList();
+        KillCountTrigger = Stage01.dataArray.Where(x => x.Trigger == "KillCount").OrderBy(x => x.Condition).ToList();
     }
 }

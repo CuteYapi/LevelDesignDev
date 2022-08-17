@@ -6,9 +6,11 @@ public class CommonValueData : MonoBehaviour
 {
     public static CommonValueData I { get; private set; }
 
-    public int PoolMonsterAmount; //오브젝트 풀에 최초 생성할 오브젝트의 개개 수량
+    public int PoolMonsterAmount;
     public int SpawnMonsterAmount;
     public float SpawnCircleDistance;
+
+    public int PoolSkillAmount;
 
     private void Awake()
     {
