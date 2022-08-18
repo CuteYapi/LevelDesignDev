@@ -19,7 +19,7 @@ MonoBehaviour:
     presetid: NontargetLine01
     prefabid: S_Fire
     damage: 1
-    missilespeed: 0.5
+    missilespeed: 1
     attackinterval: 0.5
     size: 1
     fxid: FireBall01
