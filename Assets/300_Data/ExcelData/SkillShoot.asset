@@ -1,0 +1,377 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aafa20d3f766994d8df8142716192de, type: 3}
+  m_Name: SkillShoot
+  m_EditorClassIdentifier: 
+  SheetName: Assets/300_Data/ExcelData/SkillDataTable.xlsx
+  WorksheetName: SkillShoot
+  dataArray:
+  - key: skill_fireball01_shoot
+    startlocation: me
+    headlocation: direction_random
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 2
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 1
+  - key: skill_fireball02_shoot
+    startlocation: me
+    headlocation: direction_random
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 4
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 1
+  - key: skill_fireball03_shoot
+    startlocation: me
+    headlocation: direction_random
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 6
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 1
+  - key: skill_fireball04_shoot
+    startlocation: me
+    headlocation: direction_random
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 8
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 1
+  - key: skill_fireball05_shoot
+    startlocation: me
+    headlocation: direction_random
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 10
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 1
+  - key: skill_meteor01_shoot
+    startlocation: me
+    headlocation: target_near
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 20
+    shootpenetration: 1
+  - key: skill_meteor02_shoot
+    startlocation: me
+    headlocation: target_near
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 20
+    shootpenetration: 1
+  - key: skill_meteor03_shoot
+    startlocation: me
+    headlocation: target_near
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 20
+    shootpenetration: 1
+  - key: skill_meteor04_shoot
+    startlocation: me
+    headlocation: target_near
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 20
+    shootpenetration: 1
+  - key: skill_meteor05_shoot
+    startlocation: me
+    headlocation: target_near
+    shootscale: 1
+    shootduration: 0
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 20
+    shootpenetration: 1
+  - key: skill_iceshield01_shoot
+    startlocation: me_circle
+    headlocation: float_circle
+    shootscale: 1
+    shootduration: 5
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 0
+  - key: skill_iceshield02_shoot
+    startlocation: me_circle
+    headlocation: float_circle
+    shootscale: 1
+    shootduration: 5.5
+    shootquantity: 2
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 0
+  - key: skill_iceshield03_shoot
+    startlocation: me_circle
+    headlocation: float_circle
+    shootscale: 1
+    shootduration: 6
+    shootquantity: 3
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 0
+  - key: skill_iceshield04_shoot
+    startlocation: me_circle
+    headlocation: float_circle
+    shootscale: 1
+    shootduration: 6.5
+    shootquantity: 4
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 0
+  - key: skill_iceshield05_shoot
+    startlocation: me_circle
+    headlocation: float_circle
+    shootscale: 1
+    shootduration: 7
+    shootquantity: 5
+    shootshape: round
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 0
+    shootspeed: 10
+    shootpenetration: 0
+  - key: skill_magicaura01_shoot
+    startlocation: me
+    headlocation: 0
+    shootscale: 0
+    shootduration: 0
+    shootquantity: 0
+    shootshape: 0
+    shootwidth: 0
+    shootheight: 0
+    shootrange: 0
+    shootspeed: 0
+    shootpenetration: 0
+  - key: skill_magicaura02_shoot
+    startlocation: me
+    headlocation: 0
+    shootscale: 0
+    shootduration: 0
+    shootquantity: 0
+    shootshape: 0
+    shootwidth: 0
+    shootheight: 0
+    shootrange: 0
+    shootspeed: 0
+    shootpenetration: 0
+  - key: skill_magicaura03_shoot
+    startlocation: me
+    headlocation: 0
+    shootscale: 0
+    shootduration: 0
+    shootquantity: 0
+    shootshape: 0
+    shootwidth: 0
+    shootheight: 0
+    shootrange: 0
+    shootspeed: 0
+    shootpenetration: 0
+  - key: skill_magicaura04_shoot
+    startlocation: me
+    headlocation: 0
+    shootscale: 0
+    shootduration: 0
+    shootquantity: 0
+    shootshape: 0
+    shootwidth: 0
+    shootheight: 0
+    shootrange: 0
+    shootspeed: 0
+    shootpenetration: 0
+  - key: skill_magicaura05_shoot
+    startlocation: me
+    headlocation: 0
+    shootscale: 0
+    shootduration: 0
+    shootquantity: 0
+    shootshape: 0
+    shootwidth: 0
+    shootheight: 0
+    shootrange: 0
+    shootspeed: 0
+    shootpenetration: 0
+  - key: skill_axethrow01_shoot
+    startlocation: me
+    headlocation: direction_head
+    shootscale: 1
+    shootduration: 3
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 4
+    shootheight: 4
+    shootrange: 50
+    shootspeed: 15
+    shootpenetration: 0
+  - key: skill_axethrow02_shoot
+    startlocation: me
+    headlocation: direction_head
+    shootscale: 1.5
+    shootduration: 3
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 4
+    shootheight: 4
+    shootrange: 60
+    shootspeed: 15
+    shootpenetration: 0
+  - key: skill_axethrow03_shoot
+    startlocation: me
+    headlocation: direction_head
+    shootscale: 2
+    shootduration: 3
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 4
+    shootheight: 4
+    shootrange: 70
+    shootspeed: 15
+    shootpenetration: 0
+  - key: skill_axethrow04_shoot
+    startlocation: me
+    headlocation: direction_head
+    shootscale: 2.5
+    shootduration: 3
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 4
+    shootheight: 4
+    shootrange: 80
+    shootspeed: 15
+    shootpenetration: 0
+  - key: skill_axethrow05_shoot
+    startlocation: me
+    headlocation: direction_head
+    shootscale: 3
+    shootduration: 3
+    shootquantity: 1
+    shootshape: round
+    shootwidth: 4
+    shootheight: 4
+    shootrange: 90
+    shootspeed: 15
+    shootpenetration: 0
+  - key: skill_tailraser01_shoot
+    startlocation: me
+    headlocation: direction_tail
+    shootscale: 1
+    shootduration: 1.5
+    shootquantity: 1
+    shootshape: squre
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 50
+    shootspeed: 30
+    shootpenetration: 0
+  - key: skill_tailraser02_shoot
+    startlocation: me
+    headlocation: direction_tail
+    shootscale: 1
+    shootduration: 1.5
+    shootquantity: 1
+    shootshape: squre
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 50
+    shootspeed: 30
+    shootpenetration: 0
+  - key: skill_tailraser03_shoot
+    startlocation: me
+    headlocation: direction_tail
+    shootscale: 1
+    shootduration: 1.5
+    shootquantity: 1
+    shootshape: squre
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 50
+    shootspeed: 30
+    shootpenetration: 0
+  - key: skill_tailraser04_shoot
+    startlocation: me
+    headlocation: direction_tail
+    shootscale: 1
+    shootduration: 1.5
+    shootquantity: 1
+    shootshape: squre
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 50
+    shootspeed: 30
+    shootpenetration: 0
+  - key: skill_tailraser05_shoot
+    startlocation: me
+    headlocation: direction_tail
+    shootscale: 1
+    shootduration: 1.5
+    shootquantity: 1
+    shootshape: squre
+    shootwidth: 2
+    shootheight: 2
+    shootrange: 50
+    shootspeed: 30
+    shootpenetration: 0

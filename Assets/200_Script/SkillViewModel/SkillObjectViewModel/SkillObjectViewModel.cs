@@ -9,19 +9,18 @@ public class SkillObjectViewModel : MonoBehaviour
     private Vector2 startPosition;
     private Vector2 targetPosition;
 
-    private SkillDataData skillData;
-    private PresetDataData presetData;
+    private SkillShootData skillData;
 
     private void OnEnable()
     {
         //(Clone) 이라는 String을 제거하기 위해 뒤에서부터 7글자 제거
         objectName = gameObject.name.Remove(gameObject.name.Length - 7, 7);
 
-        skillData = SkillViewModel.I.UseSkillData.Find(x => x.Prefabid == objectName);
-        presetData = SkillModel.I.PresetData.dataArray.Where(x => x.Presetid == skillData.Presetid).FirstOrDefault();
+        skillData = SkillModel.I.skillShoot.dataArray.Where
+            (x => x.Key == SkillViewModel.I.UseSkillData.Find(y => y.Prefabid == objectName).Shootkey).FirstOrDefault();
 
-        startPosition = SetStartPosition(presetData);
-        targetPosition = SetTargetPosition(presetData);
+        startPosition = SetStartPosition(skillData);
+        targetPosition = SetTargetPosition(skillData);
         transform.localPosition = startPosition;
 
         StartCoroutine(MissileSelfDestroy());
@@ -29,36 +28,44 @@ public class SkillObjectViewModel : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (presetData.Ballistictype == "Line")
+        if (!(skillData.Headlocation == "float_circle"))
         {
             transform.localPosition = Ballistic_Line(transform.localPosition, targetPosition);
         }
     }
 
-    private Vector2 SetStartPosition(PresetDataData presetData)
+    private Vector2 SetStartPosition(SkillShootData skillData)
     {
-        if (presetData.Startposition == "Player")
+        if (skillData.Startlocation == "me")
         {
+            return PlayerCharacterViewModel.I.transform.localPosition;
+        }
+
+        else if (skillData.Startlocation == "me_circle")
+        {
+            Debug.LogAssertion("Startlocation 'me_circle' 구현 필요");
             return PlayerCharacterViewModel.I.transform.localPosition;
         }
 
         else
         {
-            //추후 데이터 테이블에 따른 미사일 시작 지점 개발할 것
+            Debug.LogError("Startlocation Error : " + skillData.Startlocation);
             return PlayerCharacterViewModel.I.transform.localPosition;
         }
     }
 
-    private Vector2 SetTargetPosition(PresetDataData presetData)
+    private Vector2 SetTargetPosition(SkillShootData skillData)
     {
-        if (!presetData.Targetting)
+
+        if (skillData.Headlocation == "direction_random")
         {
-            return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            List<GameObject> monsterList = MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).ToList();
+            return monsterList[Random.Range(0, monsterList.Count - 1)].transform.position;
         }
 
         else
         {
-            //추후 타케팅 시스템 개발할 것
+            Debug.LogError("Startlocation Error : " + skillData.Startlocation);
             return Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
@@ -66,7 +73,7 @@ public class SkillObjectViewModel : MonoBehaviour
     private Vector2 Ballistic_Line(Vector2 currentPosition, Vector2 targetPosition)
     {
         currentPosition = currentPosition + (targetPosition - startPosition).normalized
-            * skillData.Missilespeed;
+            * skillData.Shootspeed;
 
         return currentPosition;
     }

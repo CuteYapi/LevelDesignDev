@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d39312150cd7314eba1390a159469ff, type: 3}
+  m_Name: SkillCondition
+  m_EditorClassIdentifier: 
+  SheetName: Assets/300_Data/ExcelData/SkillDataTable.xlsx
+  WorksheetName: SkillCondition
+  dataArray:
+  - key: skill_fireball01_condition
+    cooltime: 2.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_fireball02_condition
+    cooltime: 2.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_fireball03_condition
+    cooltime: 2.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_fireball04_condition
+    cooltime: 2.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_fireball05_condition
+    cooltime: 2.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_meteor01_condition
+    cooltime: 3.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_meteor02_condition
+    cooltime: 3.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_meteor03_condition
+    cooltime: 3.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_meteor04_condition
+    cooltime: 3.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_meteor05_condition
+    cooltime: 3.5
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_iceshield01_condition
+    cooltime: 10
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_iceshield02_condition
+    cooltime: 10
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_iceshield03_condition
+    cooltime: 10
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_iceshield04_condition
+    cooltime: 10
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_iceshield05_condition
+    cooltime: 10
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_magicaura01_condition
+    cooltime: 0
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_magicaura02_condition
+    cooltime: 0
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_magicaura03_condition
+    cooltime: 0
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_magicaura04_condition
+    cooltime: 0
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_magicaura05_condition
+    cooltime: 0
+    ratio: 1
+    projectilecheck: 0
+  - key: skill_axethrow01_condition
+    cooltime: 5
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_axethrow02_condition
+    cooltime: 5
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_axethrow03_condition
+    cooltime: 5
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_axethrow04_condition
+    cooltime: 5
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_axethrow05_condition
+    cooltime: 5
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_tailraser01_condition
+    cooltime: 6
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_tailraser02_condition
+    cooltime: 5
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_tailraser03_condition
+    cooltime: 4
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_tailraser04_condition
+    cooltime: 3
+    ratio: 1
+    projectilecheck: 1
+  - key: skill_tailraser05_condition
+    cooltime: 2
+    ratio: 1
+    projectilecheck: 1

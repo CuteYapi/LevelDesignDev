@@ -6,8 +6,12 @@ public class SkillModel : MonoBehaviour
 {
     public static SkillModel I { get; set; }
 
-    public SkillData SkillData;
-    public PresetData PresetData;
+    public SkillInformation skillInformation;
+    public SkillFX skillFX;
+    public SkillCondition skillCondition;
+    public SkillShoot skillShoot;
+    public SkillEffect skillEffect;
+    public SkillFollow skillFollow;
 
     private void Awake()
     {

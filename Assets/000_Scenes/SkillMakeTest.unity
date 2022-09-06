@@ -783,8 +783,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dc9ab4c07b96b48bff69022e480a94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillData: {fileID: 11400000, guid: fc028f0f0df40f7409048fc61502c4c2, type: 2}
-  PresetData: {fileID: 11400000, guid: 1c3a87c35e7963a428dd9c008d01fe76, type: 2}
+  skillInformation: {fileID: 11400000, guid: 709be3fd5d1c2b64da46adb00409fd9a, type: 2}
+  skillFX: {fileID: 11400000, guid: bd622b963137cf0409cef8b4e97e8e84, type: 2}
+  skillCondition: {fileID: 11400000, guid: 9cf72868990c50d4583a4d6e17636640, type: 2}
+  skillShoot: {fileID: 11400000, guid: 5140e931f9acf114293fbfc684adf531, type: 2}
+  skillEffect: {fileID: 11400000, guid: b7c3415d406e83f4cb2a8eca6b0e4434, type: 2}
+  skillFollow: {fileID: 11400000, guid: 6c869c5ff8ed1f641b072b397b2730bc, type: 2}
 --- !u!1 &1551838540
 GameObject:
   m_ObjectHideFlags: 0

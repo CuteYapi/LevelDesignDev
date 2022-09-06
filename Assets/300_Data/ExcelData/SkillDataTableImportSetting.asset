@@ -16,30 +16,63 @@ MonoBehaviour:
   scriptFilePath: 200_Script/QuickSheet/Runtime
   editorScriptFilePath: 200_Script/QuickSheet/Editor
   sheetName: SkillDataTable.xlsx
-  workSheetName: PresetData
+  workSheetName: SkillInformation
   columnHeaderList:
-  - type: 1
-    name: PresetID
+  - type: 3
+    name: Index
     isEnable: 0
     isArray: 0
   - type: 1
-    name: BallisticType
-    isEnable: 0
-    isArray: 0
-  - type: 5
-    name: BallisticSize
-    isEnable: 0
-    isArray: 0
-  - type: 8
-    name: Targetting
+    name: Key
     isEnable: 0
     isArray: 0
   - type: 1
-    name: StartPosition
+    name: SkillGroup
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: PrefabID
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: SkilDesign
+    isEnable: 0
+    isArray: 0
+  - type: 3
+    name: SkillLevel
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: SkillCategory
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: FXKey
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: ConditionKey
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: ShootKey
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: EffectKey
+    isEnable: 0
+    isArray: 0
+  - type: 1
+    name: FollowKey
     isEnable: 0
     isArray: 0
   excelFilePath: Assets/300_Data/ExcelData/SkillDataTable.xlsx
   SheetNames:
-  - SkillData
-  - PresetData
+  - SkillRule
+  - SkillInformation
+  - SkillFX
+  - SkillCondition
+  - SkillShoot
+  - SkillEffect
+  - SkillFollow
   currentSelectedSheet: 1

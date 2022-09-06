@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107110a0f5fb98d478fb8af2e5a135fd, type: 3}
+  m_Name: SkillFX
+  m_EditorClassIdentifier: 
+  SheetName: Assets/300_Data/ExcelData/SkillDataTable.xlsx
+  WorksheetName: SkillFX
+  dataArray:
+  - key: skill_fireball01_FX
+    shootfx: shoot_fireball
+    effectfx: 0
+    effectscale: 0
+    effectsound: sound_firball
+  - key: skill_fireball02_FX
+    shootfx: shoot_fireball
+    effectfx: 0
+    effectscale: 0
+    effectsound: sound_firball
+  - key: skill_fireball03_FX
+    shootfx: shoot_fireball
+    effectfx: 0
+    effectscale: 0
+    effectsound: sound_firball
+  - key: skill_fireball04_FX
+    shootfx: shoot_fireball
+    effectfx: 0
+    effectscale: 0
+    effectsound: sound_firball
+  - key: skill_fireball05_FX
+    shootfx: shoot_fireball
+    effectfx: 0
+    effectscale: 0
+    effectsound: sound_firball
+  - key: skill_meteor01_FX
+    shootfx: shoot_meteor
+    effectfx: effect_meteor
+    effectscale: 1
+    effectsound: sound_meteor
+  - key: skill_meteor02_FX
+    shootfx: shoot_meteor
+    effectfx: effect_meteor
+    effectscale: 1.2
+    effectsound: sound_meteor
+  - key: skill_meteor03_FX
+    shootfx: shoot_meteor
+    effectfx: effect_meteor
+    effectscale: 1.4
+    effectsound: sound_meteor
+  - key: skill_meteor04_FX
+    shootfx: shoot_meteor
+    effectfx: effect_meteor
+    effectscale: 1.6
+    effectsound: sound_meteor
+  - key: skill_meteor05_FX
+    shootfx: shoot_meteor
+    effectfx: effect_meteor
+    effectscale: 1.8
+    effectsound: sound_meteor
+  - key: skill_iceshield01_FX
+    shootfx: shoot_iceshield
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_iceshield
+  - key: skill_iceshield02_FX
+    shootfx: shoot_iceshield
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_iceshield
+  - key: skill_iceshield03_FX
+    shootfx: shoot_iceshield
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_iceshield
+  - key: skill_iceshield04_FX
+    shootfx: shoot_iceshield
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_iceshield
+  - key: skill_iceshield05_FX
+    shootfx: shoot_iceshield
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_iceshield
+  - key: skill_magicaura01_FX
+    shootfx: 0
+    effectfx: effect_magicaura
+    effectscale: 1
+    effectsound: sound_magicaura
+  - key: skill_magicaura02_FX
+    shootfx: 0
+    effectfx: effect_magicaura
+    effectscale: 1.5
+    effectsound: sound_magicaura
+  - key: skill_magicaura03_FX
+    shootfx: 0
+    effectfx: effect_magicaura
+    effectscale: 2
+    effectsound: sound_magicaura
+  - key: skill_magicaura04_FX
+    shootfx: 0
+    effectfx: effect_magicaura
+    effectscale: 2.5
+    effectsound: sound_magicaura
+  - key: skill_magicaura05_FX
+    shootfx: 0
+    effectfx: effect_magicaura
+    effectscale: 3
+    effectsound: sound_magicaura
+  - key: skill_axethrow01_FX
+    shootfx: shoot_axethrow
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_axethrow
+  - key: skill_axethrow02_FX
+    shootfx: shoot_axethrow
+    effectfx: 0
+    effectscale: 1.5
+    effectsound: sound_axethrow
+  - key: skill_axethrow03_FX
+    shootfx: shoot_axethrow
+    effectfx: 0
+    effectscale: 2
+    effectsound: sound_axethrow
+  - key: skill_axethrow04_FX
+    shootfx: shoot_axethrow
+    effectfx: 0
+    effectscale: 2.5
+    effectsound: sound_axethrow
+  - key: skill_axethrow05_FX
+    shootfx: shoot_axethrow
+    effectfx: 0
+    effectscale: 3
+    effectsound: sound_axethrow
+  - key: skill_tailraser01_FX
+    shootfx: shoot_tailraser
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_tailraser
+  - key: skill_tailraser02_FX
+    shootfx: shoot_tailraser
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_tailraser
+  - key: skill_tailraser03_FX
+    shootfx: shoot_tailraser
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_tailraser
+  - key: skill_tailraser04_FX
+    shootfx: shoot_tailraser
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_tailraser
+  - key: skill_tailraser05_FX
+    shootfx: shoot_tailraser
+    effectfx: 0
+    effectscale: 1
+    effectsound: sound_tailraser
