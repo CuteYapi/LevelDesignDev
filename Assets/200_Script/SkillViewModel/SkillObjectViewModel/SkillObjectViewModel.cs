@@ -53,14 +53,19 @@ public class SkillObjectViewModel : MonoBehaviour
 
         else if (skillData.Startlocation == "target_near")
         {
-            Debug.Log(skillData.Startlocation + " 구현 필요");
-            return PlayerCharacterViewModel.I.transform.localPosition;
+            GameObject targetMonster = MonsterViewModel.I.MonsterPool.
+                Where(x => x.activeSelf).
+                OrderBy(x => (x.transform.localPosition - PlayerCharacterViewModel.I.transform.localPosition).sqrMagnitude).FirstOrDefault();
+
+            return targetMonster.transform.position;
         }
 
         else if (skillData.Startlocation == "target_random")
         {
-            Debug.Log(skillData.Startlocation + " 구현 필요");
-            return PlayerCharacterViewModel.I.transform.localPosition;
+            Debug.Log("target_random과 direction_random 구분 필요");
+
+            List<GameObject> monsterList = MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).ToList();
+            return monsterList[Random.Range(0, monsterList.Count - 1)].transform.position;
         }
 
         else if (skillData.Startlocation == "me_circle")
@@ -99,9 +104,9 @@ public class SkillObjectViewModel : MonoBehaviour
 
         else if (skillData.Headlocation == "target_random")
         {
-            Debug.Log(skillData.Headlocation + " 구현 필요");
+            Debug.Log("target_random과 direction_random 구분 필요");
 
-            List<GameObject> monsterList = MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).ToList();
+            List <GameObject> monsterList = MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).ToList();
             return monsterList[Random.Range(0, monsterList.Count - 1)].transform.position;
         }
 

@@ -257,7 +257,7 @@ MonoBehaviour:
     shootpenetration: 0
   - key: skill_axethrow01_shoot
     startlocation: me
-    headlocation: direction_head
+    headlocation: direction_tail
     shootscale: 1
     shootduration: 3
     shootquantity: 1
