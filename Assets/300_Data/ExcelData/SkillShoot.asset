@@ -25,7 +25,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 10
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_fireball02_shoot
     startlocation: me
@@ -37,7 +37,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 10
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_fireball03_shoot
     startlocation: me
@@ -49,7 +49,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 10
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_fireball04_shoot
     startlocation: me
@@ -61,7 +61,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 10
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_fireball05_shoot
     startlocation: me
@@ -73,7 +73,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 10
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_meteor01_shoot
     startlocation: me
@@ -85,7 +85,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 20
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_meteor02_shoot
     startlocation: me
@@ -97,7 +97,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 20
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_meteor03_shoot
     startlocation: me
@@ -109,7 +109,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 20
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_meteor04_shoot
     startlocation: me
@@ -121,7 +121,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 20
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_meteor05_shoot
     startlocation: me
@@ -133,7 +133,7 @@ MonoBehaviour:
     shootwidth: 2
     shootheight: 2
     shootrange: 0
-    shootspeed: 20
+    shootspeed: 1
     shootpenetration: 1
   - key: skill_iceshield01_shoot
     startlocation: me_circle
@@ -144,8 +144,8 @@ MonoBehaviour:
     shootshape: round
     shootwidth: 2
     shootheight: 2
-    shootrange: 0
-    shootspeed: 10
+    shootrange: 1
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_iceshield02_shoot
     startlocation: me_circle
@@ -156,8 +156,8 @@ MonoBehaviour:
     shootshape: round
     shootwidth: 2
     shootheight: 2
-    shootrange: 0
-    shootspeed: 10
+    shootrange: 1
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_iceshield03_shoot
     startlocation: me_circle
@@ -168,8 +168,8 @@ MonoBehaviour:
     shootshape: round
     shootwidth: 2
     shootheight: 2
-    shootrange: 0
-    shootspeed: 10
+    shootrange: 1
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_iceshield04_shoot
     startlocation: me_circle
@@ -180,8 +180,8 @@ MonoBehaviour:
     shootshape: round
     shootwidth: 2
     shootheight: 2
-    shootrange: 0
-    shootspeed: 10
+    shootrange: 1
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_iceshield05_shoot
     startlocation: me_circle
@@ -192,8 +192,8 @@ MonoBehaviour:
     shootshape: round
     shootwidth: 2
     shootheight: 2
-    shootrange: 0
-    shootspeed: 10
+    shootrange: 1
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_magicaura01_shoot
     startlocation: me
@@ -265,7 +265,7 @@ MonoBehaviour:
     shootwidth: 4
     shootheight: 4
     shootrange: 50
-    shootspeed: 15
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_axethrow02_shoot
     startlocation: me
@@ -277,7 +277,7 @@ MonoBehaviour:
     shootwidth: 4
     shootheight: 4
     shootrange: 60
-    shootspeed: 15
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_axethrow03_shoot
     startlocation: me
@@ -289,7 +289,7 @@ MonoBehaviour:
     shootwidth: 4
     shootheight: 4
     shootrange: 70
-    shootspeed: 15
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_axethrow04_shoot
     startlocation: me
@@ -301,7 +301,7 @@ MonoBehaviour:
     shootwidth: 4
     shootheight: 4
     shootrange: 80
-    shootspeed: 15
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_axethrow05_shoot
     startlocation: me
@@ -313,7 +313,7 @@ MonoBehaviour:
     shootwidth: 4
     shootheight: 4
     shootrange: 90
-    shootspeed: 15
+    shootspeed: 1
     shootpenetration: 0
   - key: skill_tailraser01_shoot
     startlocation: me

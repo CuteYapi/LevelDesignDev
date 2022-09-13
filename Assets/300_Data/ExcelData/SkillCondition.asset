@@ -56,7 +56,7 @@ MonoBehaviour:
     ratio: 1
     projectilecheck: 0
   - key: skill_iceshield01_condition
-    cooltime: 10
+    cooltime: 1
     ratio: 1
     projectilecheck: 0
   - key: skill_iceshield02_condition
@@ -96,23 +96,23 @@ MonoBehaviour:
     ratio: 1
     projectilecheck: 0
   - key: skill_axethrow01_condition
-    cooltime: 5
+    cooltime: 1
     ratio: 1
-    projectilecheck: 1
+    projectilecheck: 0
   - key: skill_axethrow02_condition
-    cooltime: 5
+    cooltime: 0.1
     ratio: 1
     projectilecheck: 1
   - key: skill_axethrow03_condition
-    cooltime: 5
+    cooltime: 0.1
     ratio: 1
     projectilecheck: 1
   - key: skill_axethrow04_condition
-    cooltime: 5
+    cooltime: 0.1
     ratio: 1
     projectilecheck: 1
   - key: skill_axethrow05_condition
-    cooltime: 5
+    cooltime: 0.1
     ratio: 1
     projectilecheck: 1
   - key: skill_tailraser01_condition

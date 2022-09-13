@@ -6,7 +6,7 @@ using System.Linq;
 public class SkillViewModel : MonoBehaviour
 {
     public static SkillViewModel I { get; set; }
-    [SerializeField] private Transform SkillSpawnPool;
+    public Transform SkillSpawnPool;
 
     public List<SkillInformationData> UseSkillData = new List<SkillInformationData>();
     public List<GameObject> SkillPool = new List<GameObject>();
@@ -22,7 +22,7 @@ public class SkillViewModel : MonoBehaviour
 
     private void Start()
     {
-        SetSkill("skill_fireball01");
+        SetSkill("skill_axethrow01");
     }
 
     public void SetSkill(string skillID)
@@ -70,17 +70,23 @@ public class SkillViewModel : MonoBehaviour
         float ratio = currentSkillConditionData.Ratio;
         bool projectileCheck = currentSkillConditionData.Projectilecheck;
 
+        if (cooltime == 0) 
+        { 
+            Debug.LogError("WARNING : Cooltime is set 0"); 
+            cooltime = 1; 
+        }
+
         while (true)
         {
-            if(!(Random.Range(0,1) < ratio)) { continue; }
-            if(projectileCheck && SkillPool.Where(x => x.activeSelf).Any()) { continue; }
+            yield return new WaitForSeconds(cooltime);
 
-            if(MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).Any())
-            { 
+            if (!(Random.Range(0, 1) < ratio)) { continue; }
+            if (projectileCheck && SkillPool.Where(x => x.activeSelf).Any()) { continue; }
+
+            //if (MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).Any())
+            {
                 SkillSpawn(skillID);
             }
-
-            yield return new WaitForSeconds(cooltime);
         }
     }
 }

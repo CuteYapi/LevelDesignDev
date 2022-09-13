@@ -23,12 +23,22 @@ public class SkillObjectViewModel : MonoBehaviour
         targetPosition = SetTargetPosition(skillData);
         transform.localPosition = startPosition;
 
-        StartCoroutine(MissileSelfDestroy());
+        if (skillData.Headlocation == "direction_head" || skillData.Headlocation == "direction_tail")
+        {
+            startPosition = new Vector3(0, 0, 0);
+        }
+
+        StartCoroutine(SkillSelfDestroy());
     }
 
     private void FixedUpdate()
     {
-        if (!(skillData.Headlocation == "float_circle"))
+        if (skillData.Headlocation == "float_circle")
+        {
+            transform.RotateAround(PlayerCharacterViewModel.I.transform.localPosition, Vector3.forward, skillData.Shootspeed);
+        }
+
+        else
         {
             transform.localPosition = Ballistic_Line(transform.localPosition, targetPosition);
         }
@@ -41,10 +51,27 @@ public class SkillObjectViewModel : MonoBehaviour
             return PlayerCharacterViewModel.I.transform.localPosition;
         }
 
+        else if (skillData.Startlocation == "target_near")
+        {
+            Debug.Log(skillData.Startlocation + " 구현 필요");
+            return PlayerCharacterViewModel.I.transform.localPosition;
+        }
+
+        else if (skillData.Startlocation == "target_random")
+        {
+            Debug.Log(skillData.Startlocation + " 구현 필요");
+            return PlayerCharacterViewModel.I.transform.localPosition;
+        }
+
         else if (skillData.Startlocation == "me_circle")
         {
-            Debug.LogAssertion("Startlocation 'me_circle' 구현 필요");
-            return PlayerCharacterViewModel.I.transform.localPosition;
+            transform.parent = PlayerCharacterViewModel.I.transform;
+            return Random.insideUnitCircle.normalized * skillData.Shootrange;
+        }
+
+        else if (skillData.Startlocation == "me_random")
+        {
+            return Random.insideUnitCircle.normalized * skillData.Shootrange;
         }
 
         else
@@ -56,11 +83,63 @@ public class SkillObjectViewModel : MonoBehaviour
 
     private Vector2 SetTargetPosition(SkillShootData skillData)
     {
+        if (skillData.Headlocation == "me")
+        {
+            return PlayerCharacterViewModel.I.transform.localPosition;
+        }
 
-        if (skillData.Headlocation == "direction_random")
+        else if (skillData.Headlocation == "target_near")
+        {
+            GameObject targetMonster = MonsterViewModel.I.MonsterPool.
+                Where(x => x.activeSelf).
+                OrderBy(x => (x.transform.localPosition - PlayerCharacterViewModel.I.transform.localPosition).sqrMagnitude).FirstOrDefault();
+
+            return targetMonster.transform.position;
+        }
+
+        else if (skillData.Headlocation == "target_random")
+        {
+            Debug.Log(skillData.Headlocation + " 구현 필요");
+
+            List<GameObject> monsterList = MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).ToList();
+            return monsterList[Random.Range(0, monsterList.Count - 1)].transform.position;
+        }
+
+        else if (skillData.Headlocation == "direction_random")
         {
             List<GameObject> monsterList = MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).ToList();
             return monsterList[Random.Range(0, monsterList.Count - 1)].transform.position;
+        }
+
+        else if (skillData.Headlocation == "direction_head")
+        {
+            return PlayerCharacterViewModel.I.playerDirection * -1;
+        }
+
+        else if (skillData.Headlocation == "direction_tail")
+        {
+            return PlayerCharacterViewModel.I.playerDirection;
+        }
+
+        else if (skillData.Headlocation == "direction_cross")
+        {
+            Debug.Log(skillData.Headlocation + " 구현 필요");
+
+            List<GameObject> monsterList = MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).ToList();
+            return monsterList[Random.Range(0, monsterList.Count - 1)].transform.position;
+        }
+
+        else if (skillData.Headlocation == "direction_x")
+        {
+            Debug.Log(skillData.Headlocation + " 구현 필요");
+
+            List<GameObject> monsterList = MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).ToList();
+            return monsterList[Random.Range(0, monsterList.Count - 1)].transform.position;
+        }
+
+        else if (skillData.Headlocation == "float_circle")
+        {
+            return PlayerCharacterViewModel.I.transform.localPosition;
         }
 
         else
@@ -72,13 +151,12 @@ public class SkillObjectViewModel : MonoBehaviour
 
     private Vector2 Ballistic_Line(Vector2 currentPosition, Vector2 targetPosition)
     {
-        currentPosition = currentPosition + (targetPosition - startPosition).normalized
-            * skillData.Shootspeed;
+        currentPosition = currentPosition + (targetPosition - startPosition).normalized * skillData.Shootspeed;
 
         return currentPosition;
     }
 
-    private IEnumerator MissileSelfDestroy()
+    private IEnumerator SkillSelfDestroy()
     {
         yield return new WaitForSeconds(5f);
         gameObject.SetActive(false);
@@ -86,6 +164,10 @@ public class SkillObjectViewModel : MonoBehaviour
 
     private void OnTriggerEnter()
     {
+        if (transform.parent != SkillViewModel.I.SkillSpawnPool)
+        {
+            transform.parent = SkillViewModel.I.SkillSpawnPool;
+        }
         gameObject.SetActive(false);
     }
 }

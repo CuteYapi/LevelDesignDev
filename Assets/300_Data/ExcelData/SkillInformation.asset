@@ -18,7 +18,7 @@ MonoBehaviour:
   - index: 1
     key: skill_fireball01
     skillgroup: "\uD30C\uC774\uC5B4\uBCFC"
-    prefabid: skill_fireball
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uB79C\uB364\uBC29\uD5A5 \uB2E8\uC77C\uACF5\uACA9"
     skilllevel: 1
     skillcategory: proejctile
@@ -30,7 +30,7 @@ MonoBehaviour:
   - index: 2
     key: skill_fireball02
     skillgroup: "\uD30C\uC774\uC5B4\uBCFC"
-    prefabid: skill_fireball
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uB79C\uB364\uBC29\uD5A5 \uB2E8\uC77C\uACF5\uACA9"
     skilllevel: 2
     skillcategory: proejctile
@@ -42,7 +42,7 @@ MonoBehaviour:
   - index: 3
     key: skill_fireball03
     skillgroup: "\uD30C\uC774\uC5B4\uBCFC"
-    prefabid: skill_fireball
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uB79C\uB364\uBC29\uD5A5 \uB2E8\uC77C\uACF5\uACA9"
     skilllevel: 3
     skillcategory: proejctile
@@ -54,7 +54,7 @@ MonoBehaviour:
   - index: 4
     key: skill_fireball04
     skillgroup: "\uD30C\uC774\uC5B4\uBCFC"
-    prefabid: skill_fireball
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uB79C\uB364\uBC29\uD5A5 \uB2E8\uC77C\uACF5\uACA9"
     skilllevel: 4
     skillcategory: proejctile
@@ -66,7 +66,7 @@ MonoBehaviour:
   - index: 5
     key: skill_fireball05
     skillgroup: "\uD30C\uC774\uC5B4\uBCFC"
-    prefabid: skill_fireball
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uB79C\uB364\uBC29\uD5A5 \uB2E8\uC77C\uACF5\uACA9"
     skilllevel: 5
     skillcategory: proejctile
@@ -78,7 +78,7 @@ MonoBehaviour:
   - index: 6
     key: skill_meteor01
     skillgroup: "\uBA54\uD14C\uC624"
-    prefabid: skill_meteor
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC778\uC811\uD0C0\uAC9F \uBC94\uC704\uD3ED\uBC1C"
     skilllevel: 1
     skillcategory: proejctile
@@ -90,7 +90,7 @@ MonoBehaviour:
   - index: 7
     key: skill_meteor02
     skillgroup: "\uBA54\uD14C\uC624"
-    prefabid: skill_meteor
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC778\uC811\uD0C0\uAC9F \uBC94\uC704\uD3ED\uBC1C"
     skilllevel: 2
     skillcategory: proejctile
@@ -102,7 +102,7 @@ MonoBehaviour:
   - index: 8
     key: skill_meteor03
     skillgroup: "\uBA54\uD14C\uC624"
-    prefabid: skill_meteor
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC778\uC811\uD0C0\uAC9F \uBC94\uC704\uD3ED\uBC1C"
     skilllevel: 3
     skillcategory: proejctile
@@ -114,7 +114,7 @@ MonoBehaviour:
   - index: 9
     key: skill_meteor04
     skillgroup: "\uBA54\uD14C\uC624"
-    prefabid: skill_meteor
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC778\uC811\uD0C0\uAC9F \uBC94\uC704\uD3ED\uBC1C"
     skilllevel: 4
     skillcategory: proejctile
@@ -126,7 +126,7 @@ MonoBehaviour:
   - index: 10
     key: skill_meteor05
     skillgroup: "\uBA54\uD14C\uC624"
-    prefabid: skill_meteor
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC778\uC811\uD0C0\uAC9F \uBC94\uC704\uD3ED\uBC1C"
     skilllevel: 5
     skillcategory: proejctile
@@ -138,7 +138,7 @@ MonoBehaviour:
   - index: 11
     key: skill_iceshield01
     skillgroup: "\uC544\uC774\uC2A4\uC2E4\uB4DC"
-    prefabid: skill_iceshield
+    prefabid: S_Fireball
     skildesign: "\uBD80\uC720\uCCB4 \uC8FC\uBCC0\uD68C\uC804"
     skilllevel: 1
     skillcategory: float
@@ -150,7 +150,7 @@ MonoBehaviour:
   - index: 12
     key: skill_iceshield02
     skillgroup: "\uC544\uC774\uC2A4\uC2E4\uB4DC"
-    prefabid: skill_iceshield
+    prefabid: S_Fireball
     skildesign: "\uBD80\uC720\uCCB4 \uC8FC\uBCC0\uD68C\uC804"
     skilllevel: 2
     skillcategory: float
@@ -162,7 +162,7 @@ MonoBehaviour:
   - index: 13
     key: skill_iceshield03
     skillgroup: "\uC544\uC774\uC2A4\uC2E4\uB4DC"
-    prefabid: skill_iceshield
+    prefabid: S_Fireball
     skildesign: "\uBD80\uC720\uCCB4 \uC8FC\uBCC0\uD68C\uC804"
     skilllevel: 3
     skillcategory: float
@@ -174,7 +174,7 @@ MonoBehaviour:
   - index: 14
     key: skill_iceshield04
     skillgroup: "\uC544\uC774\uC2A4\uC2E4\uB4DC"
-    prefabid: skill_iceshield
+    prefabid: S_Fireball
     skildesign: "\uBD80\uC720\uCCB4 \uC8FC\uBCC0\uD68C\uC804"
     skilllevel: 4
     skillcategory: float
@@ -186,7 +186,7 @@ MonoBehaviour:
   - index: 15
     key: skill_iceshield05
     skillgroup: "\uC544\uC774\uC2A4\uC2E4\uB4DC"
-    prefabid: skill_iceshield
+    prefabid: S_Fireball
     skildesign: "\uBD80\uC720\uCCB4 \uC8FC\uBCC0\uD68C\uC804"
     skilllevel: 5
     skillcategory: float
@@ -258,7 +258,7 @@ MonoBehaviour:
   - index: 21
     key: skill_axethrow01
     skillgroup: "\uB3C4\uB07C\uB0A0\uB9AC\uAE30"
-    prefabid: skill_axethrow
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC870\uC791\uBC29\uD5A5 \uBC94\uC704\uACF5\uACA9"
     skilllevel: 1
     skillcategory: floor
@@ -270,7 +270,7 @@ MonoBehaviour:
   - index: 22
     key: skill_axethrow02
     skillgroup: "\uB3C4\uB07C\uB0A0\uB9AC\uAE30"
-    prefabid: skill_axethrow
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC870\uC791\uBC29\uD5A5 \uBC94\uC704\uACF5\uACA9"
     skilllevel: 2
     skillcategory: floor
@@ -282,7 +282,7 @@ MonoBehaviour:
   - index: 23
     key: skill_axethrow03
     skillgroup: "\uB3C4\uB07C\uB0A0\uB9AC\uAE30"
-    prefabid: skill_axethrow
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC870\uC791\uBC29\uD5A5 \uBC94\uC704\uACF5\uACA9"
     skilllevel: 3
     skillcategory: floor
@@ -294,7 +294,7 @@ MonoBehaviour:
   - index: 24
     key: skill_axethrow04
     skillgroup: "\uB3C4\uB07C\uB0A0\uB9AC\uAE30"
-    prefabid: skill_axethrow
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC870\uC791\uBC29\uD5A5 \uBC94\uC704\uACF5\uACA9"
     skilllevel: 4
     skillcategory: floor
@@ -306,7 +306,7 @@ MonoBehaviour:
   - index: 25
     key: skill_axethrow05
     skillgroup: "\uB3C4\uB07C\uB0A0\uB9AC\uAE30"
-    prefabid: skill_axethrow
+    prefabid: S_Fireball
     skildesign: "\uD22C\uC0AC\uCCB4 \uC870\uC791\uBC29\uD5A5 \uBC94\uC704\uACF5\uACA9"
     skilllevel: 5
     skillcategory: floor
