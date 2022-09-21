@@ -12,6 +12,8 @@ public class CommonValueData : MonoBehaviour
 
     public int PoolSkillAmount;
 
+    public float MapRespawnBorder;
+
     private void Awake()
     {
         if(I != null && I != this)
