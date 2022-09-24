@@ -20,13 +20,15 @@ public class SkillViewModel : MonoBehaviour
         I = this;
     }
 
-    private void Start()
-    {
-        SetSkill("skill_axethrow01");
-    }
-
     public void SetSkill(string skillID)
     {
+        if (UseSkillData.Contains(SkillModel.I.skillInformation.dataArray.Where(x => x.Key == skillID).FirstOrDefault()))
+        { return; }
+
+        SkillPool.Clear();
+        UseSkillData.Clear();
+        StopAllCoroutines();
+
         UseSkillData.Add(SkillModel.I.skillInformation.dataArray.Where(x => x.Key == skillID).FirstOrDefault());
 
         for (int i = 0; i < CommonValueData.I.PoolSkillAmount; i++)
@@ -47,6 +49,10 @@ public class SkillViewModel : MonoBehaviour
 
     private void SkillSpawn(string skillID)
     {
+        if(UseSkillData.Find(x => x.Key == skillID) == null)
+        {
+            StopCoroutine(FireSkill(skillID));
+        }
         string prefabID = UseSkillData.Find(x => x.Key == skillID).Prefabid;
 
         GameObject spawnSkill = SkillPool.Find(x => x.gameObject.name == prefabID + "(Clone)" && !x.activeSelf);
@@ -70,10 +76,10 @@ public class SkillViewModel : MonoBehaviour
         float ratio = currentSkillConditionData.Ratio;
         bool projectileCheck = currentSkillConditionData.Projectilecheck;
 
-        if (cooltime == 0) 
-        { 
-            Debug.LogError("WARNING : Cooltime is set 0"); 
-            cooltime = 1; 
+        if (cooltime == 0)
+        {
+            Debug.LogError("WARNING : Cooltime is set 0");
+            cooltime = 1;
         }
 
         while (true)
@@ -83,7 +89,7 @@ public class SkillViewModel : MonoBehaviour
             if (!(Random.Range(0, 1) < ratio)) { continue; }
             if (projectileCheck && SkillPool.Where(x => x.activeSelf).Any()) { continue; }
 
-            //if (MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).Any())
+            if (MonsterViewModel.I.MonsterPool.Where(x => x.activeSelf).Any())
             {
                 SkillSpawn(skillID);
             }

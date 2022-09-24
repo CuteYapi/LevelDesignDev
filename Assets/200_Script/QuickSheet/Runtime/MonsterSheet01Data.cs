@@ -28,4 +28,8 @@ public class MonsterSheet01Data
   float movespeed;
   public float Movespeed { get {return movespeed; } set { movespeed = value;} }
   
+  [SerializeField]
+  int score;
+  public int Score { get {return score; } set { score = value;} }
+  
 }

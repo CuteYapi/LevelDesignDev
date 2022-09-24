@@ -10,6 +10,10 @@ public class MonsterViewModel : MonoBehaviour
 
     public List<GameObject> MonsterPool;
 
+    private int TimeTriggerCount = 0;
+    private int ScoreTriggerCount = 0;
+    private int KillCountTriggerCount = 0;
+
     private void Awake()
     {
         if (I != null && I != this)
@@ -29,19 +33,38 @@ public class MonsterViewModel : MonoBehaviour
                 MonsterPoolLoad("Monster/" + MonsterModel.I.MonsterSheet01.dataArray[i].Prefabid);
             }
         }
+    }
 
-        //최초 몬스터 생성
-        for (int i = 0; i < StageModel.I.TimeTrigger.Count; i++)
+    private void Update()
+    {
+        if (TimeTriggerCount < StageModel.I.TimeTrigger.Count && StageModel.I.TimeTrigger[TimeTriggerCount].Condition <= CommonValueData.I.CurrentTime)
         {
-            MonsterSpawn(MonsterModel.I.MonsterSheet01.dataArray.Where(x=> x.ID == StageModel.I.TimeTrigger[i].Monsterid).FirstOrDefault().Prefabid
-                , Random.insideUnitCircle.normalized * CommonValueData.I.SpawnCircleDistance);
+            MonsterSpawn(MonsterModel.I.MonsterSheet01.dataArray.Where(x => x.ID == StageModel.I.TimeTrigger[TimeTriggerCount].Monsterid).FirstOrDefault().Prefabid
+                , (Vector2)PlayerCharacterViewModel.I.transform.localPosition + Random.insideUnitCircle.normalized * CommonValueData.I.SpawnCircleDistance) ;
+
+            TimeTriggerCount++;
+        }
+
+        if (ScoreTriggerCount < StageModel.I.ScoreTrigger.Count && StageModel.I.ScoreTrigger[ScoreTriggerCount].Condition <= CommonValueData.I.CurrentScore)
+        {
+            MonsterSpawn(MonsterModel.I.MonsterSheet01.dataArray.Where(x => x.ID == StageModel.I.ScoreTrigger[ScoreTriggerCount].Monsterid).FirstOrDefault().Prefabid
+                , (Vector2)PlayerCharacterViewModel.I.transform.localPosition + Random.insideUnitCircle.normalized * CommonValueData.I.SpawnCircleDistance);
+
+            ScoreTriggerCount++;
+        }
+
+        if (KillCountTriggerCount < StageModel.I.KillCountTrigger.Count && StageModel.I.KillCountTrigger[KillCountTriggerCount].Condition <= CommonValueData.I.CurrentKillCount)
+        {
+            MonsterSpawn(MonsterModel.I.MonsterSheet01.dataArray.Where(x => x.ID == StageModel.I.KillCountTrigger[KillCountTriggerCount].Monsterid).FirstOrDefault().Prefabid
+                , (Vector2)PlayerCharacterViewModel.I.transform.localPosition + Random.insideUnitCircle.normalized * CommonValueData.I.SpawnCircleDistance);
+
+            KillCountTriggerCount++;
         }
     }
 
     GameObject MonsterPoolLoad(string path)
     {
-        GameObject spawnMonster = (GameObject)Instantiate(Resources.Load(path),
-                                                            MonsterSpawnPool);
+        GameObject spawnMonster = (GameObject)Instantiate(Resources.Load(path), MonsterSpawnPool);
 
         spawnMonster.SetActive(false);
         MonsterPool.Add(spawnMonster);

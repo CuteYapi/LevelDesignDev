@@ -20,13 +20,16 @@ MonoBehaviour:
     name: Commander
     hp: 10
     movespeed: 0.1
+    score: 2
   - id: M_HoodedGirl
     prefabid: M_HoodedGirl
     name: HoodedGirl
     hp: 5
     movespeed: 0.3
+    score: 2
   - id: M_Knight
     prefabid: M_Knight
     name: Knight
     hp: 20
     movespeed: 0.05
+    score: 3

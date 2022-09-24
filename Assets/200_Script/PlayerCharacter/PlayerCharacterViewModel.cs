@@ -24,6 +24,7 @@ public class PlayerCharacterViewModel : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerCharacterControl();
+        PlayerSkillControl();
     }
 
     void PlayerCharacterControl()
@@ -35,32 +36,55 @@ public class PlayerCharacterViewModel : MonoBehaviour
         {
             transform.localPosition += playerCharacterMoveSpeed * Vector3.up;
             playerCharacterAnimator.SetBool("isRun", true);
+            UI_ViewModel.I.ActivateButton("MovementButton", "W");
 
             playerDirectionVector[1] = 1;
+        }
+
+        else
+        {
+            UI_ViewModel.I.DeactivateButton("MovementButton", "W");
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             transform.localPosition += playerCharacterMoveSpeed * Vector3.down;
             playerCharacterAnimator.SetBool("isRun", true);
+            UI_ViewModel.I.ActivateButton("MovementButton", "S");
 
             playerDirectionVector[1] = -1;
+        }
+
+        else
+        {
+            UI_ViewModel.I.DeactivateButton("MovementButton", "S");
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             transform.localPosition += playerCharacterMoveSpeed * Vector3.left;
             playerCharacterAnimator.SetBool("isRun", true);
+            UI_ViewModel.I.ActivateButton("MovementButton", "A");
 
             playerDirectionVector[0] = -1;
+        }
+
+        else
+        {
+            UI_ViewModel.I.DeactivateButton("MovementButton", "A");
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             transform.localPosition += playerCharacterMoveSpeed * Vector3.right;
             playerCharacterAnimator.SetBool("isRun", true);
+            UI_ViewModel.I.ActivateButton("MovementButton", "D");
 
             playerDirectionVector[0] = 1;
+        }
+        else
+        {
+            UI_ViewModel.I.DeactivateButton("MovementButton", "D");
         }
 
         if (!(Input.GetKey(KeyCode.W)
@@ -85,5 +109,48 @@ public class PlayerCharacterViewModel : MonoBehaviour
 
         playerDirection = new Vector3(playerDirectionVector[0], playerDirectionVector[1]);
         #endregion
+    }
+
+    void PlayerSkillControl()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            SkillViewModel.I.SetSkill("skill_fireball01");
+            UI_ViewModel.I.ActivateButton("SkillButton", "skill_fireball01");
+
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_meteor01");
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_iceshield01");
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_axethrow01");
+        }
+
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            SkillViewModel.I.SetSkill("skill_meteor01");
+            UI_ViewModel.I.ActivateButton("SkillButton", "skill_meteor01");
+
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_fireball01");
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_iceshield01");
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_axethrow01");
+        }
+
+        if (Input.GetKey(KeyCode.Alpha3))
+        {
+            SkillViewModel.I.SetSkill("skill_iceshield01");
+            UI_ViewModel.I.ActivateButton("SkillButton", "skill_iceshield01");
+
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_fireball01");
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_meteor01");
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_axethrow01");
+        }
+
+        if (Input.GetKey(KeyCode.Alpha4))
+        {
+            SkillViewModel.I.SetSkill("skill_axethrow01");
+            UI_ViewModel.I.ActivateButton("SkillButton", "skill_axethrow01");
+
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_fireball01");
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_meteor01");
+            UI_ViewModel.I.DeactivateButton("SkillButton", "skill_iceshield01");
+        }
     }
 }

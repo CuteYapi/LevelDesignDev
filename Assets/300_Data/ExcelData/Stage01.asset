@@ -22,7 +22,7 @@ MonoBehaviour:
     condition: 100
     monsterid: M_Commander
   - trigger: KillCount
-    condition: 5
+    condition: 15
     monsterid: M_Commander
   - trigger: Time
     condition: 0
@@ -94,10 +94,10 @@ MonoBehaviour:
     condition: 0
     monsterid: M_Commander
   - trigger: Score
-    condition: 200
+    condition: 20
     monsterid: M_Commander
   - trigger: KillCount
-    condition: 10
+    condition: 15
     monsterid: M_Commander
   - trigger: Time
     condition: 0

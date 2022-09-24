@@ -14,6 +14,10 @@ public class CommonValueData : MonoBehaviour
 
     public float MapRespawnBorder;
 
+    public float CurrentTime = 0;
+    public float CurrentKillCount = 0;
+    public float CurrentScore = 0;
+
     private void Awake()
     {
         if(I != null && I != this)
@@ -22,4 +26,20 @@ public class CommonValueData : MonoBehaviour
         }
         I = this;
     }
+
+    private void Start()
+    {
+        StartCoroutine(Timer());
+    }
+
+    IEnumerator Timer()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.1f);
+            CurrentTime += 0.1f;
+            UI_ViewModel.I.RenewalBoard("Time");
+        }
+    }
+
 }

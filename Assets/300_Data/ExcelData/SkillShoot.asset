@@ -144,7 +144,7 @@ MonoBehaviour:
     shootshape: round
     shootwidth: 2
     shootheight: 2
-    shootrange: 1
+    shootrange: 10
     shootspeed: 1
     shootpenetration: 0
   - key: skill_iceshield02_shoot

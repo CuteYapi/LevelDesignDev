@@ -38,6 +38,10 @@ MonoBehaviour:
     name: Movespeed
     isEnable: 0
     isArray: 0
+  - type: 3
+    name: Score
+    isEnable: 0
+    isArray: 0
   excelFilePath: Assets/300_Data/ExcelData/MonsterDataTable.xlsx
   SheetNames:
   - MonsterSheet01
