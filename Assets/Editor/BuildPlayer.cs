@@ -17,9 +17,6 @@ public class BuildPlayer : MonoBehaviour
         buildPlayerOptions.target = BuildTarget.Android;
         buildPlayerOptions.options = BuildOptions.Development;
 
-        
-        Debug.Log("그냥 실행만 되나?");
-        /*
         BuildReport report = BuildPipeline.BuildPlayer(buildPlayerOptions);
         BuildSummary summary = report.summary;
 
@@ -32,7 +29,7 @@ public class BuildPlayer : MonoBehaviour
         {
             Debug.Log("Build Failed");
         }
-        */
+        
     }
 
     private static string SetApkName()
